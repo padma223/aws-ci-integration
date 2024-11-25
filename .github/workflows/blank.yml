@@ -18,7 +18,7 @@ jobs:
           sudo ./aws/install --update
       - name:  aws configure 
         run: |
-          mkdir terraform-demo
+          mkdir -p ~/.aws
           touch ~/.aws/credentials
           echo "[default]
           aws_access_key_id = ${{secrets.AWS_ACCESS_KEY_ID}}
